@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interface de Comando</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+    <h1 class="title">Gerador de Piadas</h1>
+    <div id="app">
+        <div class="command-container">
+            <input type="text" v-model="comando" placeholder="faça uma piada sobre ..." class="tema" @keyup.enter="executarComando">
+            <button @click="executarComando" class="confirm-button" >Confirmar</button>  
+        </div>
+        <div class="output-box">
+            <p>{{ resultado }}</p>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
